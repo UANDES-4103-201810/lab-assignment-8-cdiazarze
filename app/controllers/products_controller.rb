@@ -5,6 +5,7 @@ class ProductsController < ApplicationController
   # GET /products.json
   def index
     @products = @user.products
+    format.json  { render :json => @products.to_json }
   end
 
   # GET /products/1
