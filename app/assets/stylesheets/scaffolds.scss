@@ -23,12 +23,7 @@ a {
   color: #000;
 
   &:visited {
-    color: #666;
-  }
-
-  &:hover {
-    color: #fff;
-    background-color: #000;
+    color: #ffffff;
   }
 }
 
@@ -36,9 +31,8 @@ th {
   padding-bottom: 5px;
 }
 
-td {
-  padding: 0 5px 7px;
-}
+
+
 
 div {
   &.field, &.actions {
@@ -81,4 +75,9 @@ div {
 
 label {
   display: block;
+}
+td {
+  padding: 0 5px 7px;
+  vertical-align: middle !important;
+
 }

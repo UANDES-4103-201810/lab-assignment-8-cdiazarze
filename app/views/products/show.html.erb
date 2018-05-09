@@ -1,24 +1,38 @@
 <p id="notice"><%= notice %></p>
 
-<p>
-  <strong>Name:</strong>
-  <%= @product.name %>
-</p>
+<h1><span class="glyphicon glyphicon-apple"> Product <%= @product.name %></span></h1><br>
 
-<p>
-  <strong>Weight:</strong>
-  <%= @product.weight %>
-</p>
 
-<p>
-  <strong>Price:</strong>
-  <%= @product.price %>
-</p>
+<div class="row ">
+  <div class="col-sm-3 col-md-3 ">
+    <div class="field">
+      <h4><strong>Name </strong></h4>
+      <%= @product.name %>
+    </div>
+  </div>
+  <div class="col-sm-3 col-md-3 ">
+    <div class="field">
+      <h4><strong>Weight </strong></h4>
+      <%= @product.weight %>
+    </div>
+  </div>
+</div>
+<div class="row">
+  <div class="col-sm-3 col-md-3 ">
+    <div class="field">
+      <h4><strong>Price </strong></h4>
+      <%= number_to_currency @product.price %>
+    </div>
+  </div>
+  <div class="col-sm-3 col-md-3 ">
+    <div class="field">
+      <h4><strong>User </strong></h4>
+      <%= @product.user.username%>
+    </div>
+  </div>
+</div>
 
-<p>
-  <strong>User:</strong>
-  <%= @product.user %>
-</p>
 
-<%= link_to 'Edit', edit_product_path(@product) %> |
-<%= link_to 'Back', products_path %>
+
+<%= link_to 'Edit', edit_user_product_path(@user,@product), class:"btn btn-warning" %>
+<%= link_to 'Back', user_products_path(@user), class:"btn btn-primary" %>

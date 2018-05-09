@@ -1,0 +1,10 @@
+<li class="active list-unstyled text-center">
+  <button class="btn btn-primary btn-block">
+    <%= link_to "Profile", user_path(object)%><span style="font-size:16px;" class="pull-right hidden-xs showopacity glyphicon glyphicon-user"></span>
+  </button>
+</li>
+<li class="list-unstyled text-center">
+  <button class="btn btn-success btn-block">
+    <%= link_to "My Products", user_products_path(object.id)%><span style="font-size:16px;" class="pull-right hidden-xs showopacity glyphicon glyphicon-apple white-button-text"></span>
+  </button>
+</li>

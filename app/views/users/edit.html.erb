@@ -2,5 +2,7 @@
 
 <%= render 'form', user: @user %>
 
-<%= link_to 'Show', @user %> |
-<%= link_to 'Back', users_path %>
+
+<%= link_to 'Go to Profile', @user, class:"btn btn-primary" %>
+<%= link_to 'Go to all Users', users_path, class:"btn btn-primary" %>
+

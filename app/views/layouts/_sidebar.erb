@@ -1,0 +1,12 @@
+<nav class="navbar navbar-default sidebar" role="navigation">
+  <%if @user && @user.id%>
+    <%=render "layouts/sidebar_userview", object:@user%>
+  <%else%>
+    <li class="active list-unstyled text-center">
+      <button class="btn btn-primary btn-block">
+        <%= link_to "Home", users_path%>
+        <span style="font-size:16px;" class="pull-right hidden-xs showopacity glyphicon glyphicon-user"></span>
+      </button>
+    </li>
+  <%end%>
+</nav>

@@ -1,0 +1,26 @@
+
+<table class="table table-responsive table-striped">
+  <thead>
+  <tr>
+
+    <th>First name</th>
+    <th>Last name</th>
+    <th>Username</th>
+  </tr>
+  </thead>
+
+  <tbody>
+  <% @users.each do |user| %>
+    <tr>
+      <td class="align_middle"><%= user.first_name %></td>
+      <td><%= user.last_name %></td>
+      <td><%= user.username %></td>
+      <td class="white-button-text"><%= link_to 'Show', user, class:"btn btn-primary white-button-text" %></td>
+      <td><%= link_to 'Edit', edit_user_path(user),class:"btn btn-warning white-button-text" %></td>
+      <td><%= link_to 'Destroy', user,class:"btn btn-danger white-button-text", method: :delete, data: { confirm: 'Are you sure?' } %></td>
+    </tr>
+  <% end %>
+  </tbody>
+</table>
+<br>
+

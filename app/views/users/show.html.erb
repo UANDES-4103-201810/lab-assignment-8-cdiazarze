@@ -1,19 +1,17 @@
-<p id="notice"><%= notice %></p>
 
-<p>
-  <strong>First name:</strong>
-  <%= @user.first_name %>
-</p>
+  <p id="notice"><%= notice %></p>
 
-<p>
-  <strong>Last name:</strong>
-  <%= @user.last_name %>
-</p>
+  <h1 class="text-center"><span class="glyphicon glyphicon-user"> <%= @user.first_name%> <%= @user.last_name %></span></h1><br>
 
-<p>
-  <strong>Username:</strong>
-  <%= @user.username %>
-</p>
+  <div class="row">
+    <div class="col-sm-3 col-md-3 ">
+      <div class="field">
+        <h3><strong>Username </strong> </h3>
+        <%= @user.username %>
+      </div>
+    </div>
+  </div>
 
-<%= link_to 'Edit', edit_user_path(@user) %> |
-<%= link_to 'Back', users_path %>
+
+  <%= link_to 'Edit', edit_user_path(@user), class:"btn btn-warning" %>
+  <%= link_to 'Go to all Users', users_path, class:"btn btn-primary" %>
