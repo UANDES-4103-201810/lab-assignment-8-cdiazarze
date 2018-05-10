@@ -5,7 +5,11 @@ class ProductsController < ApplicationController
   # GET /products.json
   def index
     @products = @user.products
-    format.json  { render :json => @products.to_json }
+    respond_to do |format|
+      format.html # index.html.erb
+      format.xml  { render xml: @products }
+      format.json { render json: @products }
+    end
   end
 
   # GET /products/1
