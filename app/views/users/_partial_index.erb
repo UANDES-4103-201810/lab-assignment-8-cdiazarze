@@ -14,7 +14,7 @@
     <tr>
       <td class="align_middle"><%= user.first_name %></td>
       <td><%= user.last_name %></td>
-      <td><%= user.username %></td>
+      <td class="usuario" id="<%=user.id.to_s%>"><%= user.username %></td>
       <td class="white-button-text"><%= link_to 'Show', user, class:"btn btn-primary white-button-text" %></td>
       <td><%= link_to 'Edit', edit_user_path(user),class:"btn btn-warning white-button-text" %></td>
       <td><%= link_to 'Destroy', user,class:"btn btn-danger white-button-text", method: :delete, data: { confirm: 'Are you sure?' } %></td>
@@ -23,4 +23,24 @@
   </tbody>
 </table>
 <br>
+<div class="ex2" id="example">
+<li id="ex3">
 
+</div>
+
+
+<script>
+
+    $(".usuario").click(function () {
+        $.get('/users/'+ this.id +'/products.json', function(data){
+            $.each(data, function(i , obj){
+                console.log(obj)
+                $("#example").append($("#ex3").html("Name: "+obj.name+"</li> <li> Weight: "+obj.weight+"</li> <li> Price: "+obj.price+"</li>"));
+
+            });
+            });
+        });
+
+
+
+</script>
